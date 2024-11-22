@@ -65,8 +65,12 @@ async def handle_image(update: Update, context: CallbackContext) -> None:
     
     # Send response with buttons
     await update.message.reply_text(
-        "Thanks for sending an image! 📸\n\n"
-        "Check out our channels and resources:",
+        "Welcome to our Telegram Bot! 🚀\n\n"
+        "Discover our channels and resources:\n\n"
+        "• FoFNews: Stay updated with the latest news\n"
+        "• Trust Test Bot: Explore our trusted services\n"
+        "• X.com: Visit our main platform\n\n"
+        "Click the buttons below to explore!",
         reply_markup=reply_markup
     )
 
