@@ -36,7 +36,7 @@ async def start_command(update: Update, context: CallbackContext) -> None:
     reply_markup = InlineKeyboardMarkup(keyboard)
     
     await update.message.reply_text(
-        "Welcome to our Telegram Bot! 🚀\n\n"
+        "Welcome to our Telegram Bot! THIS was tHE Update...🚀 \n\n"
         "Discover our channels and resources:\n\n"
         "• FoFNews: Stay updated with the latest news\n"
         "• Trust Test Bot: Explore our trusted services\n"
