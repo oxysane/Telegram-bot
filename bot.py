@@ -63,19 +63,20 @@ async def handle_image(update: Update, context: CallbackContext) -> None:
     )
 
 
-def main() -> None:
-    """Start the bot"""
-    # Create the Application
+def create_app():
+    """Initialize bot application"""
     application = Application.builder().token(TOKEN).build()
     
     # Add handlers
     application.add_handler(CommandHandler("start", start_command))
     application.add_handler(MessageHandler(filters.PHOTO, handle_image))
     
-    # Start the bot
-    logger.info("Starting bot...")
-    application.run_polling(drop_pending_updates=True)
+    return application
+
+
+app = create_app()
 
 
 if __name__ == '__main__':
-    main()
+    logger.info("Starting bot...")
+    app.run_polling(drop_pending_updates=True)
